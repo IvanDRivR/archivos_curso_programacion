@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <title>Netflix</title>
+    </head>
+    <body class="flex flex-col w-[100%] bg-[#333333]">
+        <!--Parte 1: Fondo y principal-->
+        <section class="bg-[url('https://assets.nflxext.com/ffe/siteui/vlv3/d049a3bd-40ee-411b-9f16-d1def798d43b/5a0ee99b-9115-4ef8-b329-8ae9d7a9e340/VE-es-20230313-popsignuptwoweeks-perspective_alpha_website_medium.jpg')] w-[100%] bg-cover h-[100vh]">
+            <div class="flex flex-col w-[100%] h-[100vh] justify-around bg-gradient-to-b from-black/90 via-black/25 to-black/90">
+                <!--Navegacion-->
+                <nav class="flex aling-items-center justify-between px-[120px]">
+                    <img class="w-[150px] h-[50px]" src="./imagenes/images/Logonetflix.png" alt="Logonetflix">
+                    <!--Iniciar sesion e idioma-->
+                    <div class="flex gap-[20px]">
+                        <select class="h-[35px] w-[90px] px-[4px] rounded-[3px] bg-transparent text-white border-[1px] border-white border-solid" name="Idioma">
+                            <option class="bg-black text-[13px] text-white text-center" value="Español">Español</option>
+                            <option class="bg-black text-[13px] text-white text-center" value="Ingles">Ingles</option>
+                        </select>
+                            <button class="text-white rounded h-[35px] px-[16px] py-[6px] bg-red-600 hover:bg-red-700">Iniciar sesión</button>
+                    </div>
+                </nav>
+                <!--Introduccion-->
+                <main class="flex flex-col justify-center items-center w-[100%] h-[500px]">
+                    <h1 class="text-white font-[700] text-[50px] text-center">Películas y series ilimitadas y mucho más</h1>
+                    <h3 class="text-white font-[400] text-[30px]">Disfruta donde quieras. Cancela cuando quieras.</h3>
+                    <p class="text-white font-[400] text-[20px]">¿Quieres ver Netflix ya? Ingresa tu email para crear una cuenta o reiniciar tu membresía de Netflix.</p>      
+                    <!--Registro-->           
+                    <div>
+                        <input type="text" class="bg-[#212125] w-[400px] h-[55px] rounded-lg border-[1px] border-solid pl-3 mt-5" placeholder="Email">
+                        <button class="text-white rounded h-[55px] w-[150px] px-[16px] py-[6px] bg-red-600 hover:bg-red-700">Comenzar ></button>
+                    </div>  
+                </main>
+            </div>
+        </section>
+        <div class="w-[100%] h-[5px]"></div>
+        <!--Parte 2: Secciones de contenido-->
+            <!--Seccion 1-->
+            <section class="grid grid-cols-2 bg-[#010100] w-[100%] h-[450px]">
+                <div class="flex flex-col ml-[150px] h-[440px] justify-center">
+                    <h1 class="text-white font-[800] text-[50px]">Disfruta en tu TV</h1>
+                    <p class="text-white text-[25px]">Ve en smart TV, PlayStation, Xbox, Chromecast, Apple TV, reproductores de Blu-ray y más.</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <video class="absolute mt-7 w-[370px] h-[300px]" loop="" autoplay="" preload="" muted="" src="./imagenes/images/video-tv-0819.m4v"></video>
+                    <img class="w-[500px] z-10" src="./imagenes/images/download1.png" alt="">
+                </div>
+            </section>
+            <div class="w-[100%] h-[5px]"></div>
+            <!--Seccion 2-->
+            <section class="grid grid-cols-2 bg-[#010100] w-[100%] h-[450px]">
+                <div class="flex flex-col ml-[150px] w-[500px]">
+                    <img src="./imagenes/images/download2.jpg" alt="">
+                </div>
+                <div class="flex flex-col h-[440px] mr-[150px] justify-center">
+                    <h1 class="text-white font-[800] text-[50px]">Descarga tus series para verlas offline</h1>
+                    <p class="text-white text-[25px]">Guarda tu contenido favorito y tendrás siempre algo para ver.</p>
+                </div>
+            </section>
+            <div class="w-[100%] h-[5px]"></div>
+            <!--Seccion 3-->
+            <section class="grid grid-cols-2 bg-[#010100] w-[100%] h-[450px]">
+                <div class="flex flex-col ml-[150px] h-[440px] justify-center">
+                    <h1 class="text-white font-[800] text-[50px]">Disfruta donde quieras</h1>
+                    <p class="text-white text-[25px]">Películas y series ilimitadas en tu teléfono, tablet, computadora y TV sin costo adicional.</p>
+                </div>
+                <div class="flex flex-col w-[500px] justify-center">
+                    <video class="absolute ml-[120px] mb-[120px] w-[250px] h-[300px]" loop="" autoplay="" preload="" muted="" src="./imagenes/images/video_tv.m4v"></video>
+                    <img class="w-[500px] z-10" src="./imagenes/images/download3.png" alt="">
+                </div>
+            </section>
+            <div class="w-[100%] h-[5px]"></div>
+            <!--Seccion 4-->
+            <section class="grid grid-cols-2 bg-[#010100] w-[100%] h-[450px]">
+                <div class="flex flex-col justify-center items-center ml-[120px]">
+                    <img class="w-[500px]" src="./imagenes/images/download5.png" alt="">
+                </div>
+                <div class="flex flex-col h-[440px] justify-center mr-[120px]">
+                    <h1 class="text-white font-[700] text-[50px]">Crea perfiles para niños</h1>
+                    <p class="text-white text-[25px]">Los niños vivirán aventuras con sus personajes favoritos en un espacio diseñado exclusivamente para ellos, sin costo con tu membresía.</p>
+                </div>
+            </section>
+            <div class="w-[100%] h-[5px]"></div>
+            <!--Seccion 5-->
+            <section class="bg-[#010100] flex flex-col justify-center items-center w-[100%] h-[700px]"">
+                <h1 class="text-white text-[20px]">¿Quieres ver Netflix ya? Ingresa tu email para crear una cuenta o reiniciar tu membresía de Netflix.</h1>
+                <div class="flex justify-end items-end mt-[15px]">
+                    <input type="text" class="bg-[#212125] w-[400px] h-[55px] rounded-lg border-[1px] border-solid pl-[10px] mr-[10px]" placeholder="Email">
+                    <button class="text-white rounded h-[55px] w-[150px] bg-red-600 hover:bg-red-700">Comenzar ></button>
+                </div>
+            </section>
+            <div class="w-[100%] h-[5px]"></div>
+        <!--Parte 3: Footer-->
+        <footer>
+            <section class="text-[#ffffffb3] text-[15px] bg-[#010100] w-[100%] h-[500px]">
+                <div class="flex justify-start ml-[120px] pt-[50px]">
+                    <h1>¿Preguntas? Llama al 1 (408) 469-4467 (USA)</h1>
+                </div>
+                <ul class="grid grid-cols-3 flex space-y-3 items-center h-[240px] mt-[30px] ml-[120px]">
+                    <li>Preguntas frecuentes</li>
+                    <li>Términos de las tarjetas de regalo</li>
+                    <li>Centro de ayuda</li>
+                    <li>Cuenta</li>
+                    <li>Prensa</li>
+                    <li>Relaciones con inversionistas</li>
+                    <li>Empleo</li>
+                    <li>Formas de ver</li>
+                    <li>Términos de uso</li>
+                    <li>Privacidad</li>
+                    <li>Preferencias de cookies</li>
+                    <li>Información corporativa</li>
+                    <li>Contáctanos</li>
+                    <li>Pruebad de velocidad</li>
+                    <li>Avisos legales</li>
+                    <li>Solo en Netflix</li>
+                </ul>
+                <select class="h-[35px] w-[90px] px-[4px] rounded-[3px] bg-transparent text-white border-[1px] border-white border-solid mt-[20px] ml-[120px]" name="Idioma">
+                    <option class="bg-black text-[13px] text-white text-center" value="Español">Español</option>
+                    <option class="bg-black text-[13px] text-white text-center" value="Ingles">Ingles</option>
+                </select>
+                <div class="ml-[120px] pt-[20px]">
+                    <h1>Netlix Venezuela</h1>
+                </div>
+            </section>
+        </footer>
+    </body>
+</html>

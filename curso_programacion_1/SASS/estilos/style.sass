@@ -1,0 +1,89 @@
+*
+    box-sizing: border-box
+    margin: 0px
+    top: 0px
+
+/*Variables*/
+
+$color1: linear-gradient(gray,black)
+$color2: linear-gradient(green,black)
+$ancho: 300px
+
+/*Mixings*/
+
+@mixin flexColCenter()
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+/*Mixing con parametros*/
+
+@mixin flexible($param1,$param2,$param3,$param4)
+    display: $param1
+    flex-direction: $param2
+    justify-content: $param3
+    align-items: $param4
+
+/*Super mixin*/
+
+@mixin superMixin($param1,$param2,$param3,$param4,$param5,$param6,$param7,$param8,$param9)
+    display: $param1
+    flex-direction: $param2
+    grid-template-columns: $param3
+    justify-content: $param4
+    align-items: $param5
+    place-items: $param6
+    width: $param7
+    height: $param8
+    background: $param9
+    
+/*Anidamientos*/
+
+body
+    width: 100%
+    /*body main*/
+    main
+        width: 100%
+        background: $color1
+        div
+            @include flexColCenter()
+            img
+                width: $ancho
+        section
+            @include superMixin(flex,column,null,center,center,null,100%,500px,$color2)
+
+.caja_bem
+    @include superMixin(flex,column,null,center,center,null,100%,500px,blue)
+    gap: 10px
+    &_hijo
+        border: 3px solid white
+        padding: 10px
+        &_parrafo
+            color: orange
+
+.caja_bem_2
+    @include superMixin(flex,column,null,center,center,null,100%,500px,purple)
+    &_parrafo_1
+        background: white
+    &_parrafo_2
+        background: blue
+        color: white
+        cursor: pointer
+    &_parrafo_2:hover
+        color: orange
+    &_parrafo_2::first-letter
+        color: red
+    &_parrafo_9
+        @extend .caja_bem_2_parrafo_2
+        border-radius: 10px
+    &_parrafo_4
+        @extend .caja_bem_2_parrafo_9
+        padding: 10px
+/*Funciones*/
+
+@function opacidad($color,$nivel)
+    @return transparentize($color,$nivel)
+
+.caja_2
+    background: opacidad(green,0.9)
